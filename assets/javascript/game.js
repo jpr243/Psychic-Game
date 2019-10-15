@@ -53,6 +53,6 @@ document.onkeyup = function(event) {
       "Guesses Remaining: " + guessesLeft + " ";
   }
 
-  var letters = "<p>Guessed Letters: " + guessedLetters.join(", ") + " ";
+  var letters = "<p>Your Guesses So Far: " + guessedLetters.join(", ") + " ";
   document.getElementById("guessedLetters").innerHTML = letters;
 };
