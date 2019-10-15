@@ -35,19 +35,23 @@ document.onkeyup = function(event) {
   guessedLetters.push(yourGuess); //This is to capture letters entered by the user
   var computerAns =
     choiceLetters[Math.floor(Math.random() * choiceLetters.length)];
-  //This outlines the rules of the game.  I still need to code clearing letters after youWin and youLose
+
+  //This outlines the rules of the game.
   if (yourGuess === computerAns) {
     youWin++;
     guessesLeft = 9;
+    guessedLetters.length = 0;
   } else if (guessesLeft === 0) {
     youLose++;
     guessesLeft = 9;
+    guessedLetters.length = 0;
   } else {
     guessesLeft--;
   }
   //This is the html
+
   var html =
-    "<p><strong>Guess what letter I'm thinking of:</strong></p>" +
+    "<p>Guess what letter I'm thinking of:</p>" +
     "<p>Wins: " +
     youWin +
     "</p>" +
