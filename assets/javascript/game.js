@@ -39,31 +39,20 @@ document.onkeyup = function(event) {
   //This outlines the rules of the game.
   if (yourGuess === computerAns) {
     youWin++;
-    guessesLeft = 9;
+    guessesLeft = 10;
+    document.getElementById("wins").innerHTML = "Wins:  " + youWin + " ";
     guessedLetters.length = 0;
   } else if (guessesLeft === 0) {
     youLose++;
-    guessesLeft = 9;
+    guessesLeft = 10;
     guessedLetters.length = 0;
+    document.getElementById("losses").innerHTML = "Losses: " + youLose + " ";
   } else {
     guessesLeft--;
+    document.getElementById("guessesRemaining").innerHTML =
+      "Guesses Remaining: " + guessesLeft + " ";
   }
-  //This is the html
 
-  var html =
-    "<p>Guess what letter I'm thinking of:</p>" +
-    "<p>Wins: " +
-    youWin +
-    "</p>" +
-    "<p>Losses: " +
-    youLose +
-    "</p>" +
-    "<p>Guesses Remaining: " +
-    guessesLeft +
-    "</p>" +
-    "<p>Guessed Letter: " +
-    guessedLetters.join(", ") +
-    "</p>"; //Show guessed letters heredocument.querySelector("#psychicGame").innerHTML = html;
-
-  document.getElementById("results").innerHTML = html;
+  var letters = "<p>Guessed Letters: " + guessedLetters.join(", ") + " ";
+  document.getElementById("guessedLetters").innerHTML = letters;
 };
