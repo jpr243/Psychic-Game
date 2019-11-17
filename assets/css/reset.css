@@ -2,25 +2,40 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: lightskyblue;
+  /*background-color: lightskyblue;*/
+  background: url("../images/3.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: cursive;
+}
+
+img {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 h1 {
-  color: purple;
+  color: white;
   word-spacing: 5px;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   text-align: center;
+  font-size: 100px;
+  padding: 20px;
 }
 
 h3 {
   text-align: center;
 }
 
+#container {
+  color: white;
+  font-size: 20px;
+}
+
 #game {
   padding: 20px;
   text-align: left;
   font-weight: bold;
-  border-color: black;
+  border-color: white;
   border-style: double;
 }
